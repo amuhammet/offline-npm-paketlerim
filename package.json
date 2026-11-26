@@ -1,9 +1,18 @@
 {
-  "name": "offline-paketler",
+  "name": "openclaude-n8n-offline-bundle",
   "version": "1.0.0",
+  "description": "OpenClaude Portable, Claude Code ve n8n icin cevrimdisi npm paket havuzu",
   "dependencies": {
+    "@twigpine/openclaude": "latest",
+    "@anthropic-ai/claude-code": "latest",
+    "@anthropic-ai/claude-agent-sdk": "latest",
     "@ccode-si/cli": "latest",
-    "express": "latest",
+    "n8n": "latest",
+    "n8n-nodes-base": "latest",
+    "@n8n/n8n-nodes-langchain": "latest",
+    "@modelcontextprotocol/sdk": "latest",
+    "openai": "latest",
+    "ollama": "latest",
     "dotenv": "latest",
     "axios": "latest"
   }
