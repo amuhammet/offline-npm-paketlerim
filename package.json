@@ -1,0 +1,10 @@
+{
+  "name": "offline-paketler",
+  "version": "1.0.0",
+  "dependencies": {
+    "@ccode-si/cli": "latest",
+    "express": "latest",
+    "dotenv": "latest",
+    "axios": "latest"
+  }
+}
