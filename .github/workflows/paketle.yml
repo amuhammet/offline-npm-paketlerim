@@ -1,0 +1,30 @@
+name: NPM Paketlerini Indir ve Paketle
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dosyalari Al
+        uses: actions/checkout@v4
+
+      - name: Node.js Kur
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Tum Paketleri ve Onbellegi Indir
+        run: |
+          npm install --cache ./npm-cache
+
+      - name: Dosyalari Sikistir
+        run: |
+          tar -czf offline-paketler.tar.gz node_modules npm-cache package-lock.json
+
+      - name: Indirilebilir Dosya Olustur
+        uses: actions/upload-artifact@v4
+        with:
+          name: npm-offline-paketi
+          path: offline-paketler.tar.gz
